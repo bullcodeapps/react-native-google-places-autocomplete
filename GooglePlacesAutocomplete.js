@@ -529,6 +529,9 @@ export const GooglePlacesAutocomplete = forwardRef((props, ref) => {
   const debounceData = useMemo(() => debounce(_request, props.debounce), []);
 
   const _onChangeText = (text) => {
+    if (stateText === text) {
+      return;
+    }
     setStateText(text);
     debounceData(text);
   };
