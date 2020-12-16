@@ -468,6 +468,7 @@ export const GooglePlacesAutocomplete = forwardRef((props, ref) => {
       _requests.push(request);
       request.timeout = props.timeout;
       request.ontimeout = props.onTimeout;
+      request.onload = props.onLoad;
       request.onreadystatechange = () => {
         if (request.readyState !== 4) {
           return;
@@ -845,6 +846,7 @@ GooglePlacesAutocomplete.propTypes = {
   minLength: PropTypes.number,
   nearbyPlacesAPI: PropTypes.string,
   numberOfLines: PropTypes.number,
+  onLoad: PropTypes.func,
   onFail: PropTypes.func,
   onNotFound: PropTypes.func,
   onPress: PropTypes.func,
@@ -893,6 +895,7 @@ GooglePlacesAutocomplete.defaultProps = {
   minLength: 0,
   nearbyPlacesAPI: 'GooglePlacesSearch',
   numberOfLines: 1,
+  onLoad: () => {},
   onFail: () => {},
   onNotFound: () => {},
   onPress: () => {},

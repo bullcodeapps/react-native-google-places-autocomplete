@@ -399,6 +399,7 @@ interface GooglePlacesAutocompleteProps {
   // Which API to use: GoogleReverseGeocoding or GooglePlacesSearch
   nearbyPlacesAPI?: 'GoogleReverseGeocoding' | 'GooglePlacesSearch';
   numberOfLines?: number;
+  onLoad?: () => void;
   onFail?: (error?: any) => void;
   onNotFound?: () => void;
   onPress?: (data: GooglePlaceData, detail: GooglePlaceDetail | null) => void;
