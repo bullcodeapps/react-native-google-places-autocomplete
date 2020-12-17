@@ -1,6 +1,7 @@
 {
   "git": {
-    "requireBranch": "master"
+    "requireBranch": "master",
+    "requireCleanWorkingDir": false
   },
   "github": {
     "release": true
