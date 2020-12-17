@@ -7,3 +7,4 @@ yarn.lock
 .*ignore
 .github
 .release-it.json
+.env
